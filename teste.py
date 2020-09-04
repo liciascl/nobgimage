@@ -27,8 +27,9 @@ try:
     else:
         print("Error:", response.status_code, response.text)
 
+
 except:
-    print("Erro no Download")
+    print("Deu errooo")
 
 
 
