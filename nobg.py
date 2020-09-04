@@ -1,6 +1,9 @@
 # Requires "requests" to be installed (see python-requests.org)
 import requests
 import subprocess as cmd
+from PIL import Image
+import sys
+
 
 
 try:
@@ -11,7 +14,7 @@ try:
     response = requests.post(
         'https://api.remove.bg/v1.0/removebg',
         files={'image_file': open('/home/borg/Desktop/no-bg/ImagemComFundo.jpg', 'rb')},
-        data={'size': 'auto'},
+        data={'800': '800'},
         headers={'X-Api-Key': 'Z6oCZ7L15ervntLoxLWZJAaq'},
     )
     if response.status_code == requests.codes.ok:
