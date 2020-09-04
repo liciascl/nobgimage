@@ -5,7 +5,7 @@ import subprocess as cmd
 
 try:
     down = ""
-    down = cmd.run("wget https://raw.githubusercontent.com/liciascl/nobgimage/master/ImagemComFundo.jpg", check=True, shell=True)
+   # down = cmd.run("wget https://raw.githubusercontent.com/liciascl/nobgimage/master/ImagemComFundo.jpg", check=True, shell=True)
     print("Download Realizado com Sucesso")
 
     response = requests.post(
