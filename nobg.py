@@ -25,7 +25,8 @@ for index, file in enumerate(os.listdir(dir)):
         exit
     
     else:
-
+        if antiga == "teste.md":
+            exit
         os.rename(antiga,nova)
         print("{} renomeada para image{}".format(file,index))
         try:
