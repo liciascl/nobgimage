@@ -52,7 +52,7 @@ for index, file in enumerate(os.listdir(dir)):
                 img.save(filename) 
 
         try:
-            cp = cmd.run("rm -rf /home/borg/Desktop/nobgimage/fotos_com_fundo/*.png", check=True, shell=True)
+            #cp = cmd.run("rm -rf /home/borg/Desktop/nobgimage/fotos_com_fundo/*.png", check=True, shell=True)
             cp = cmd.run("git add .", check=True, shell=True)
             print("Imagem sem bg subindo")
             message = "Imagem sem bg subindo"
