@@ -19,7 +19,7 @@ print (dir)
 for index, file in enumerate(os.listdir(dir)):
     #renomeia as imagens com fundo
     antiga=dir+file
-    nova=dir+"image"+str(index)
+    nova=dir+"image0"+str(index)
     if antiga == nova:
         print ("As fotos ja foram tratadas")
         exit
@@ -53,6 +53,7 @@ for index, file in enumerate(os.listdir(dir)):
                 img.save(filename) 
 
         try:
+            cp = cmd.run("rm -rf /home/borg/Desktop/nobgimage/fotos_com_fundo/image0*", check=True, shell=True)
             cp = cmd.run("git add .", check=True, shell=True)
             print("Imagem sem bg subindo")
             message = "Imagem sem bg subindo"
