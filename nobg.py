@@ -5,8 +5,11 @@ from PIL import Image
 import os, shutil
 import requests
 
-#try:
-    #pega quantas imagens precisa tirar o fundo
+try:
+        cp = cmd.run("git pull", check=True, shell=True)
+        print("fazendo download das imagens")
+except:
+    print(cp)
 
 dir = os.getcwd()
 dir = dir + "/fotos_com_fundo/"
@@ -38,9 +41,15 @@ for index, file in enumerate(os.listdir(dir)):
             img = img.resize((basewidth,hsize), Image.ANTIALIAS)
             img.save(filename) 
 
-
-
-
+try:
+    cp = cmd.run("git add .", check=True, shell=True)
+    print("Imagem sem bg subindo")
+    message = "Imagem sem bg subindo"
+    cp = cmd.run(f"git commit -m '{message}'", check=True, shell=True)
+    cp = cmd.run("git push -u origin master -f", check=True, shell=True)
+    
+except:
+    print(cp)
 
 
 
