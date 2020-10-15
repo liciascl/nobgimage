@@ -58,9 +58,9 @@ for index, file in enumerate(os.listdir(dir)):
             message = "Imagem sem bg subindo"
             cp = cmd.run(f"git commit -m '{message}'", check=True, shell=True)
             cp = cmd.run("git push -u origin master -f", check=True, shell=True)
-            print (cp)
+            #print (cp)
         except:
-            print(cp)
+            print("deu erro no commit")
 
 
 
